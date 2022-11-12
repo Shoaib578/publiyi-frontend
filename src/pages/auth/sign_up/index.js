@@ -1,5 +1,5 @@
 import React from 'react'
-import GoogleLogin from 'react-google-login';
+
 
 
 export default class Signup extends React.Component {
@@ -111,13 +111,7 @@ export default class Signup extends React.Component {
               </div>
                 <br />
                 <center>
-                <GoogleLogin
-                clientId="484857833697-m8p8hlqdpgmka0g8jq88qdbt2m6btb44.apps.googleusercontent.com"
-                buttonText="Signup with Google"
-                onSuccess={this.responseGoogle}
-                onFailure={this.responseGoogle}
-                cookiePolicy={'single_host_origin'}
-            />
+              
                 </center>
              
             </form>
