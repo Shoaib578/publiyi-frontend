@@ -5,6 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { FacebookIcon, TwitterIcon,WhatsappIcon,LinkedinIcon, FacebookMessengerShareButton, FacebookMessengerIcon } from "react-share";
 import { FacebookShareButton, TwitterShareButton,WhatsappShareButton,LinkedinShareButton } from "react-share";
 
+
 export default class ProductDetails extends React.Component {
 
   showToastMessage = () => {
@@ -44,6 +45,9 @@ export default class ProductDetails extends React.Component {
                     </a>
                   </div>
                 </div>
+
+
+
                 <div className="col-lg-7 h-auto mb-30">
                   <div className="h-100 bg-light p-30">
                     <h3>Product Name Goes Here</h3>
@@ -118,11 +122,17 @@ export default class ProductDetails extends React.Component {
 
                     </div>
 
-
+                    <div style={{display:"flex",flexDirection:"row",justifyContent:"space-between",width:"43%"}}>
                     <button  data-toggle="modal" data-target="#exampleModal" className="btn btn-primary py-2 px-4" >
                     Contact Now</button>
 
-                    
+                      <button  data-toggle="modal" data-target="#reserveModal" className="btn btn-primary py-2 px-4 ml-3" >
+                    Reserve Now</button>
+                    </div>
+                  
+
+
+
                     <div className="d-flex pt-2 mt-3">
                       <strong className="text-dark mr-2">Share on:</strong>
                       <div className="d-inline-flex">
@@ -301,6 +311,50 @@ export default class ProductDetails extends React.Component {
     </div>
   </div>
 </div>
+
+   {/* Reserve Now Modal */}
+   <div className="modal fade" id="reserveModal" tabIndex={-1} role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div className="modal-dialog" role="document">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h5 className="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+            <div className="modal-body">
+
+
+                        <div className="form-group mb-3">
+                          <label htmlFor="amount_of_people">Amount of people
+                          </label>
+                          <input id="amount_of_people" name="amount_of_people" type="number" className="form-control validate" required />
+                        </div>
+
+
+                        <div className="form-group mb-3">
+                          <label htmlFor="check_in">Check in
+                          </label>
+                          <input id="check_in" name="check_in" type="date" className="form-control validate" required />
+                        </div>
+
+
+
+                        <div className="form-group mb-3">
+                          <label htmlFor="check_out">Check out
+                          </label>
+                          <input id="check_out" name="check_out" type="date" className="form-control validate" required />
+                        </div>
+            </div>
+            <div className="modal-footer">
+              <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" className="btn btn-primary">Reserve</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
 <ToastContainer />
           </div>
         )

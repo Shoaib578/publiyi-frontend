@@ -49,20 +49,13 @@ export default class Carousel extends React.Component{
             </div>
             <div className="col-lg-4">
               <div className="product-offer mb-30" style={{height: '200px'}}>
-                <img className="img-fluid" src="img/offer-1.jpg" alt="" />
-                <div className="offer-text">
-                  <h6 className="text-white text-uppercase">Save 20%</h6>
-                  <h3 className="text-white mb-3">Special Offer</h3>
-                  <a href className="btn btn-primary">Shop Now</a>
-                </div>
+                
+                <div className="img-fluid" id="container-aa3c00a92a88c702eb3e4032e47081e4"></div>
               </div>
               <div className="product-offer mb-30" style={{height: '200px'}}>
-                <img className="img-fluid" src="img/offer-2.jpg" alt="" />
-                <div className="offer-text">
-                  <h6 className="text-white text-uppercase">Save 20%</h6>
-                  <h3 className="text-white mb-3">Special Offer</h3>
-                  <a href className="btn btn-primary">Shop Now</a>
-                </div>
+              
+                <div className="img-fluid" id="container-aa3c00a92a88c702eb3e4032e47081e4"></div>
+
               </div>
             </div>
           </div>
