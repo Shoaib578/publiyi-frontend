@@ -1,7 +1,19 @@
 import React from 'react'
 import Product from '../../components/product'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { FacebookIcon, TwitterIcon,WhatsappIcon,LinkedinIcon, FacebookMessengerShareButton, FacebookMessengerIcon } from "react-share";
+import { FacebookShareButton, TwitterShareButton,WhatsappShareButton,LinkedinShareButton } from "react-share";
 
 export default class ProductDetails extends React.Component {
+
+  showToastMessage = () => {
+    toast.success('Success Notification !', {
+        position: toast.POSITION.TOP_RIGHT
+    });
+};
+
+
     render(){
         return(
             <div>
@@ -40,79 +52,142 @@ export default class ProductDetails extends React.Component {
                     <p className="mb-4">Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit
                       clita ea. Sanc ipsum et, labore clita lorem magna duo dolor no sea
                       Nonumy</p>
-                    <div className="d-flex mb-3">
-                      <strong className="text-dark mr-3">Sizes:</strong>
+                    <div className="d-flex mb-1">
+                      <strong className="text-dark">Sizes:</strong>
                      
-                        <div className="custom-control custom-radio custom-control-inline">
+                        <div  className="ml-2">
                          
                           <label >XS</label>
                         </div>
                         
 
-                        <div className="custom-control custom-radio custom-control-inline">
+                        <div className="ml-2">
                          
                           <label  >X</label>
                         </div>
 
-                        <div className="custom-control custom-radio custom-control-inline">
+                        <div  className="ml-2">
                          
                           <label  >XS</label>
                         </div>
                       
                     </div>
-                    <div className="d-flex mb-4">
-                      <strong className="text-dark mr-3">Colors:</strong>
+                    <div className="d-flex ">
+                      <strong className="text-dark">Colors:</strong>
                      
-                        <div className="custom-control custom-radio custom-control-inline">
+                        <div className='ml-2'>
                         
                           <label >Black</label>
                         </div>
 
 
-                        <div className="custom-control custom-radio custom-control-inline">
+                        <div className='ml-2'>
                         
                         <label >red</label>
                       </div>
 
 
-
-                      <div className="custom-control custom-radio custom-control-inline">
+                      <div className='ml-2'>
                         
-                        <label >blue</label>
-                      </div>
-
-
-                      <div className="custom-control custom-radio custom-control-inline">
-                        
-                        <label >green</label>
+                        <label >red</label>
                       </div>
                       
                       
+                      <div className='ml-2'>
+                        
+                        <label >red</label>
+                      </div>
+
+                      <div className='ml-2'>
+                        
+                        <label >red</label>
+                      </div>
+
                     </div>
 
-                    <a className="btn btn-primary py-2 px-4" href='#'>
-                    <i className="fa fa-comment" /> &nbsp;Send Message</a>
+                    <div className="d-flex mb-4">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+
+                     
+                        <div className='ml-2'>
+                        
+                          <label >Pakistan</label>
+                        </div>
 
 
-                    <a className="btn btn-primary py-2 px-4 ml-5" href='#'>
-                    <i className="fa fa-phone" /> &nbsp;Get phone number</a>
+
+                    </div>
+
+
+                    <button  data-toggle="modal" data-target="#exampleModal" className="btn btn-primary py-2 px-4" >
+                    Contact Now</button>
 
                     
                     <div className="d-flex pt-2 mt-3">
                       <strong className="text-dark mr-2">Share on:</strong>
                       <div className="d-inline-flex">
-                        <a className="text-dark px-2" href>
-                          <i className="fab fa-facebook-f" />
-                        </a>
-                        <a className="text-dark px-2" href>
-                          <i className="fab fa-twitter" />
-                        </a>
-                        <a className="text-dark px-2" href>
-                          <i className="fab fa-linkedin-in" />
-                        </a>
-                        <a className="text-dark px-2" href>
-                          <i className="fab fa-pinterest" />
-                        </a>
+                      
+                      
+                      <FacebookShareButton
+                        url={"https://peing.net/ja/"}
+                        quote={"Hello this is the publiyi Camera"}
+                        hashtag={"#camera"}
+                        description={"aiueo"}
+                        className="Demo__some-network__share-button"
+                      >
+                        <FacebookIcon size={25} round /> 
+                      </FacebookShareButton>
+
+
+
+                      <WhatsappShareButton
+                        url={"https://peing.net/ja/"}
+                        quote={"Hello this is the publiyi Camera"}
+                        hashtag={"#camera"}
+                        description={"aiueo"}
+                        className="Demo__some-network__share-button ml-2"
+                      >
+                        <WhatsappIcon size={25} round /> 
+                      </WhatsappShareButton>
+
+
+
+                      <TwitterShareButton
+                        url={"https://peing.net/ja/"}
+                        quote={"Hello this is the publiyi Camera"}
+                        hashtag={"#camera"}
+                        description={"aiueo"}
+                        className="Demo__some-network__share-button ml-2"
+                      >
+                        <TwitterIcon size={25} round /> 
+                      </TwitterShareButton>
+
+
+
+                      <LinkedinShareButton
+                        url={"https://peing.net/ja/"}
+                        quote={"Hello this is the publiyi Camera"}
+                        hashtag={"#camera"}
+                        description={"aiueo"}
+                        className="Demo__some-network__share-button ml-2"
+                      >
+                        <LinkedinIcon size={25} round /> 
+                      </LinkedinShareButton>
+
+
+                      <FacebookMessengerShareButton
+                        url={"https://peing.net/ja/"}
+                        quote={"Hello this is the publiyi Camera"}
+                        hashtag={"#camera"}
+                        description={"aiueo"}
+                        className="Demo__some-network__share-button ml-2"
+                      >
+                        <FacebookMessengerIcon size={25} round /> 
+                      </FacebookMessengerShareButton>
+
+
+
+                        
                       </div>
                     </div>
                   </div>
@@ -135,39 +210,25 @@ export default class ProductDetails extends React.Component {
                       <div className="tab-pane fade" id="tab-pane-2">
                         <h4 className="mb-3">Additional Information</h4>
                         <p>Eos no lorem eirmod diam diam, eos elitr et gubergren diam sea. Consetetur vero aliquyam invidunt duo dolores et duo sit. Vero diam ea vero et dolore rebum, dolor rebum eirmod consetetur invidunt sed sed et, lorem duo et eos elitr, sadipscing kasd ipsum rebum diam. Dolore diam stet rebum sed tempor kasd eirmod. Takimata kasd ipsum accusam sadipscing, eos dolores sit no ut diam consetetur duo justo est, sit sanctus diam tempor aliquyam eirmod nonumy rebum dolor accusam, ipsum kasd eos consetetur at sit rebum, diam kasd invidunt tempor lorem, ipsum lorem elitr sanctus eirmod takimata dolor ea invidunt.</p>
-                        <div className="row">
+                       
+                        <h4 className="mb-3">Facilities</h4>
+                       
+                       <div className="row">
                           <div className="col-md-6">
                             <ul className="list-group list-group-flush">
                               <li className="list-group-item px-0">
-                                Sit erat duo lorem duo ea consetetur, et eirmod takimata.
+                                Coffee
                               </li>
                               <li className="list-group-item px-0">
-                                Amet kasd gubergren sit sanctus et lorem eos sadipscing at.
+                                Heater
                               </li>
                               <li className="list-group-item px-0">
-                                Duo amet accusam eirmod nonumy stet et et stet eirmod.
+                               Medical Treatement
                               </li>
-                              <li className="list-group-item px-0">
-                                Takimata ea clita labore amet ipsum erat justo voluptua. Nonumy.
-                              </li>
+                              
                             </ul> 
                           </div>
-                          <div className="col-md-6">
-                            <ul className="list-group list-group-flush">
-                              <li className="list-group-item px-0">
-                                Sit erat duo lorem duo ea consetetur, et eirmod takimata.
-                              </li>
-                              <li className="list-group-item px-0">
-                                Amet kasd gubergren sit sanctus et lorem eos sadipscing at.
-                              </li>
-                              <li className="list-group-item px-0">
-                                Duo amet accusam eirmod nonumy stet et et stet eirmod.
-                              </li>
-                              <li className="list-group-item px-0">
-                                Takimata ea clita labore amet ipsum erat justo voluptua. Nonumy.
-                              </li>
-                            </ul> 
-                          </div>
+                       
                         </div>
                       </div>
                      
@@ -196,6 +257,51 @@ export default class ProductDetails extends React.Component {
         </div>
      
       {/* Products End */}
+
+
+     {/* Contact Now Modal */}
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+      
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" style={{display:"flex",flexDirection:"row",justifyContent:"space-between"}}>
+        
+        
+
+      <a className="btn btn-primary py-2 px-4" href='#'>
+                    <i className="fa fa-comment" /> &nbsp;Send message</a>
+
+      
+          
+      <div onClick={()=>{
+      navigator.clipboard.writeText('+9230534880')
+      .then(res=>{
+        toast.success('Copied to Clipboard',{
+     
+          position: toast.POSITION.BOTTOM_RIGHT, autoClose:15000})
+
+      })
+      
+      } } className='btn btn-primary py-2 px-4  '>
+
+      <i className="fa fa-phone" /> &nbsp;+9230534880
+
+        </div>    
+        
+
+
+
+      </div>
+    
+    </div>
+  </div>
+</div>
+<ToastContainer />
           </div>
         )
     }

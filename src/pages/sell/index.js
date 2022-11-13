@@ -3,6 +3,9 @@ import TagsInput from 'react-tagsinput'
 
 import 'react-tagsinput/react-tagsinput.css'
 
+import all_categories from '../../all_categories'
+
+
 export default class Sell extends React.Component {
     state = {
         tags:[],
@@ -10,8 +13,10 @@ export default class Sell extends React.Component {
         colors:[],
         image1:null,
         image2:null,
-        image3:null
-
+        image3:null,
+        facilities:[],
+        category:"",
+        sub_categories:[]
     }
    
     handleChangeTag = (tags) => {
@@ -42,7 +47,27 @@ export default class Sell extends React.Component {
         this.setState({image3:URL.createObjectURL(event.target.files[0])})
             
       }
-    
+      
+      handleChangeFacilities = (facilities)=>{
+        this.setState({facilities})
+      }
+
+
+      subcategories = (category)=>{
+       
+        let cate = []
+
+        all_categories.forEach((sub_cat)=>{
+         
+          if(sub_cat.category == category){
+            cate = sub_cat.sub_categories
+          }
+        })
+
+      
+       this.setState({sub_categories:cate})
+
+      }
     
     render(){
         return(
@@ -88,13 +113,53 @@ export default class Sell extends React.Component {
 
                         <div className="form-group mb-3">
                           <label htmlFor="category">Category</label>
-                          <select className="custom-select tm-select-accounts" id="category">
+                          <select onChange={(val)=>{
+                            this.setState({category:val.target.value})
+                            this.subcategories(val.target.value)
+                            
+                            }} className="custom-select tm-select-accounts" id="category">
                             <option selected>Select category</option>
-                            <option value={1}>New Arrival</option>
-                            <option value={2}>Most Popular</option>
-                            <option value={3}>Trending</option>
+                            {all_categories.map(data=>{
+                           return <option value={data.category}>{data.category}</option>
+
+                            })}
+                            
+
+
+
                           </select>
                         </div>
+
+
+                        <div className="form-group mb-3">
+                          <label htmlFor="category">Sub Category</label>
+                          <select className="custom-select tm-select-accounts" id="category">
+                            <option selected>Select sub category</option>
+                           
+                           
+                           {this.state.sub_categories.map(data=>{
+                            return <option value={data}>{data}</option>
+                             
+                           })}
+
+                           
+
+
+                          </select>
+                        </div>
+
+
+
+                        <div className="form-group mb-3">
+                          <label htmlFor="category">Will you be able to deliver</label>
+                          <select className="custom-select tm-select-accounts" id="category">
+                            <option value={1}>Yes</option>
+                            <option value={0} selected>No</option>
+                            
+                          </select>
+                        </div>
+
+
                         <div className="row">
                           <div className="form-group mb-3 col-xs-12 col-sm-6">
                             <label htmlFor="expire_date">Price
@@ -116,7 +181,9 @@ export default class Sell extends React.Component {
                         <label>Colors</label>
                         <TagsInput value={this.state.colors} onChange={this.handleChangeColors} />
                          <br />
-                     
+                         <label>Facilities</label>
+                        <TagsInput value={this.state.facilities} onChange={this.handleChangeFacilities} />
+                         <br />
                      </div>
 
                       

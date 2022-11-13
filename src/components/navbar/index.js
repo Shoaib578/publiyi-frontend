@@ -1,4 +1,5 @@
 import React from 'react'
+import all_categories from '../../all_categories'
 
 export default class Navbar extends React.Component{
     render(){
@@ -13,23 +14,21 @@ export default class Navbar extends React.Component{
           </a>
           <nav className="collapse position-absolute navbar navbar-vertical navbar-light align-items-start p-0 bg-light" id="navbar-vertical" style={{width: 'calc(100% - 30px)', zIndex: 999}}>
             <div className="navbar-nav w-100">
-              <div className="nav-item dropdown dropright">
-                <a href="#" className="nav-link dropdown-toggle" data-toggle="dropdown">Dresses <i className="fa fa-angle-right float-right mt-1" /></a>
+             {all_categories.map(data=>{
+              return <div className="nav-item dropdown dropright">
+                <a href="#" className="nav-link dropdown-toggle" data-toggle="dropdown">{data.category} <i className="fa fa-angle-right float-right mt-1" /></a>
                 <div className="dropdown-menu position-absolute rounded-0 border-0 m-0">
-                  <a href className="dropdown-item">Men's Dresses</a>
-                  <a href className="dropdown-item">Women's Dresses</a>
-                  <a href className="dropdown-item">Baby's Dresses</a>
+                <a href="/" className="dropdown-item">{data.category}</a>
+                  {data.sub_categories.map(sub=>{
+                  return <a href className="dropdown-item">{sub}</a>
+
+                  })}
+           
                 </div>
               </div>
-              <a href className="nav-item nav-link">Shirts</a>
-              <a href className="nav-item nav-link">Jeans</a>
-              <a href className="nav-item nav-link">Swimwear</a>
-              <a href className="nav-item nav-link">Sleepwear</a>
-              <a href className="nav-item nav-link">Sportswear</a>
-              <a href className="nav-item nav-link">Jumpsuits</a>
-              <a href className="nav-item nav-link">Blazers</a>
-              <a href className="nav-item nav-link">Jackets</a>
-              <a href className="nav-item nav-link">Shoes</a>
+             })}
+              
+             
             </div>
           </nav>
         </div>
@@ -89,7 +88,7 @@ export default class Navbar extends React.Component{
               <div className="navbar-nav mr-auto py-0 mt-3">
 
                 
-                <a href="/" className="nav-item nav-link active">Home</a>
+                <a href="/" className="nav-item nav-link">Home</a>
                 <a href="/shop" className="nav-item nav-link">Shop</a>
            
                 <div className="nav-item dropdown text-decoration-none d-block d-lg-none">

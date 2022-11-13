@@ -6,6 +6,7 @@ import AdvertiseProduct from '../pages/advertise_product';
 import SignIn from '../pages/auth/sign_in';
 import Signup from '../pages/auth/sign_up';
 import Chat from '../pages/chat';
+import RecentChats from '../pages/chat/recent_chats';
 import Contact from '../pages/contact';
 import Favorites from '../pages/favorites';
 import Home from '../pages/home';
@@ -20,13 +21,18 @@ render() {
 return <Router>
           <TopBar />
           <Navbar />
+         {window.location.pathname != "/messages"?
     <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+          :null}
 
         <Switch>
             <Route exact path='/' element={<Home />}/>
             <Route exact  path='/shop' element={<Shop />}/>
             <Route exact  path='/product_details' element={<ProductDetails />}/>
-            <Route exact  path='/chat' element={<Chat />}/>
+            <Route exact  path='/chat' element={<RecentChats />}/>
+            <Route exact  path='/messages' element={<Chat />}/>
+
             <Route exact  path='/notifications' element={<Notifications />}/>
             <Route exact  path='/favorites' element={<Favorites />}/>
             <Route exact  path='/sell' element={<Sell />}/>
