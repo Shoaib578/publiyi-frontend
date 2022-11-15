@@ -1,6 +1,6 @@
 
 import React from 'react';
-
+import  GoogleAds  from 'react-google-ads';
 export default class Carousel extends React.Component{
     render(){
         return(
@@ -49,8 +49,15 @@ export default class Carousel extends React.Component{
             </div>
             <div className="col-lg-4">
               <div className="product-offer mb-30" >
-                
-                <div className="img-fluid" id="container-aa3c00a92a88c702eb3e4032e47081e4"></div>
+                <div className='img-fluid'>
+                <GoogleAds
+              client="ca-pub-6796247302325530"
+              slot="2166678587"
+              style={{ display: 'inline-block', width: '100%', }}
+            />
+                </div>
+             
+               
               </div>
             
             </div>
