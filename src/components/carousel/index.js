@@ -1,10 +1,13 @@
 
 import React from 'react';
-import AdSense from 'react-adsense';
+import GoogleAds from '../GoogleAds';
+
 
 export default class Carousel extends React.Component{
 
     render(){
+      const ads = process.env.NODE_ENV === 'production' &&
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" /> 
         return(
           <div className="container-fluid mb-3">
           <div className="row px-xl-5">
@@ -51,12 +54,8 @@ export default class Carousel extends React.Component{
             </div>
             <div className="col-lg-4">
               <div className="product-offer mb-30" >
-              <AdSense.Google
-  client='ca-pub-6796247302325530'
-  slot='2166678587'
-
-  
-/>
+           
+              <GoogleAds slot="2166678587"/>
              
                
               </div>
