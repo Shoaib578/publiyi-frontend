@@ -4,7 +4,7 @@ import React from 'react';
 export default class Carousel extends React.Component{
   componentDidMount(){
     (window.adsbygoogle = window.adsbygoogle || []).push({
-      google_ad_client: "ca-pub-9142841210062390",
+      google_ad_client: "ca-pub-6796247302325530",
       enable_page_level_ads: true
  });
   }
