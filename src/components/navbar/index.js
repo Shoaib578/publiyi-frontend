@@ -18,9 +18,9 @@ export default class Navbar extends React.Component{
               return <div className="nav-item dropdown dropright">
                 <a href="#" className="nav-link dropdown-toggle" data-toggle="dropdown">{data.category} <i className="fa fa-angle-right float-right mt-1" /></a>
                 <div className="dropdown-menu position-absolute rounded-0 border-0 m-0">
-                <a href="/" className="dropdown-item">{data.category}</a>
+                <a href="/shop" className="dropdown-item">{data.category}</a>
                   {data.sub_categories.map(sub=>{
-                  return <a href className="dropdown-item">{sub}</a>
+                  return <a href="/shop" className="dropdown-item">{sub}</a>
 
                   })}
            
@@ -96,15 +96,19 @@ export default class Navbar extends React.Component{
                   <div className="dropdown-menu bg-primary rounded-0 border-0 m-0">
                     
 
-                    <a href className="dropdown-item">Shirts</a>
-              <a href className="dropdown-item">Jeans</a>
-              <a href className="dropdown-item">Swimwear</a>
-              <a href className="dropdown-item">Sleepwear</a>
-              <a href className="dropdown-item">Sportswear</a>
-              <a href className="dropdown-item">Jumpsuits</a>
-              <a href className="dropdown-item">Blazers</a>
-              <a href className="dropdown-item">Jackets</a>
-              <a href className="dropdown-item">Shoes</a>
+                  {all_categories.map(data=>{
+              return <div className="nav-item dropdown dropright">
+                <a href="#" className="nav-link dropdown-toggle" data-toggle="dropdown">{data.category} <i className="fa fa-angle-right float-right mt-1" /></a>
+                <div className="dropdown-menu position-absolute rounded-0 border-0 m-0">
+                <a href="/shop" className="dropdown-item">{data.category}</a>
+                  {data.sub_categories.map(sub=>{
+                  return <a href="/shop" className="dropdown-item">{sub}</a>
+
+                  })}
+           
+                </div>
+              </div>
+             })}
                   </div>
                 </div>
 
