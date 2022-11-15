@@ -1,6 +1,6 @@
 
 import React from 'react';
-import  GoogleAds  from 'react-google-ads';
+
 export default class Carousel extends React.Component{
     render(){
         return(
@@ -50,11 +50,18 @@ export default class Carousel extends React.Component{
             <div className="col-lg-4">
               <div className="product-offer mb-30" >
                 <div className='img-fluid'>
-                <GoogleAds
-              client="ca-pub-6796247302325530"
-              slot="2166678587"
-              style={{ display: 'inline-block', width: '100%', }}
-            />
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6796247302325530"
+     crossorigin="anonymous"></script>
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6796247302325530"
+     data-ad-slot="2166678587"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
                 </div>
              
                
