@@ -20,6 +20,8 @@ export default class ProductDetails extends React.Component {
             <div>
             {/* Shop Detail Start */}
             <div className="container-fluid pb-5">
+            <div  id="container-aa3c00a92a88c702eb3e4032e47081e4"></div>
+
               <div className="row px-xl-5">
                 <div className="col-lg-5 mb-30">
                   <div id="product-carousel" className="carousel slide" data-ride="carousel">
