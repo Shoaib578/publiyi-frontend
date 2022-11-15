@@ -2,6 +2,12 @@
 import React from 'react';
 
 export default class Carousel extends React.Component{
+  componentDidMount(){
+    (window.adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-9142841210062390",
+      enable_page_level_ads: true
+ });
+  }
     render(){
         return(
           <div className="container-fluid mb-3">
@@ -50,18 +56,15 @@ export default class Carousel extends React.Component{
             <div className="col-lg-4">
               <div className="product-offer mb-30" >
                 <div className='img-fluid'>
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6796247302325530"
-     crossorigin="anonymous"></script>
+             
 
 <ins class="adsbygoogle"
-     style="display:block"
+     style={{display:"block"}}
      data-ad-client="ca-pub-6796247302325530"
      data-ad-slot="2166678587"
      data-ad-format="auto"
      data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+
                 </div>
              
                
