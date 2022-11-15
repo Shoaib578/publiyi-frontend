@@ -4,7 +4,8 @@ import PropTypes from 'prop-types'
 export default class HTML extends React.Component {
   render() {
     const ads = process.env.NODE_ENV === 'production' &&
-      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" /> ;
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6796247302325530"
+    crossorigin="anonymous"></script> ;
 
     return (
       <html {...this.props.htmlAttributes}>

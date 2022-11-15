@@ -6,8 +6,7 @@ import GoogleAds from '../GoogleAds';
 export default class Carousel extends React.Component{
 
     render(){
-      const ads = process.env.NODE_ENV === 'production' &&
-      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" /> 
+      
         return(
           <div className="container-fluid mb-3">
           <div className="row px-xl-5">
