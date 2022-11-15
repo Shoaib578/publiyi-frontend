@@ -1,13 +1,9 @@
 
 import React from 'react';
+import AdSense from 'react-adsense';
 
 export default class Carousel extends React.Component{
-  componentDidMount(){
-    (window.adsbygoogle = window.adsbygoogle || []).push({
-      google_ad_client: "ca-pub-6796247302325530",
-      enable_page_level_ads: true
- });
-  }
+
     render(){
         return(
           <div className="container-fluid mb-3">
@@ -55,17 +51,12 @@ export default class Carousel extends React.Component{
             </div>
             <div className="col-lg-4">
               <div className="product-offer mb-30" >
-                <div className='img-fluid'>
-             
+              <AdSense.Google
+  client='ca-pub-6796247302325530'
+  slot='2166678587'
 
-    <div className="adsbygoogle"
-     
-     data-ad-client="ca-pub-6796247302325530"
-     data-ad-slot="2166678587"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></div>
-
-                </div>
+  
+/>
              
                
               </div>
