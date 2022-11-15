@@ -5,11 +5,11 @@ class GoogleAds extends Component {
     googleInit = null;
 
     componentDidMount() {
-      const { timeout } = this.props;
+     
       this.googleInit = setTimeout(() => {
         if (typeof window !== 'undefined')
           (window.adsbygoogle = window.adsbygoogle || []).push({});
-      }, timeout);
+      }, 500);
     }
   
     componentWillUnmount() {
