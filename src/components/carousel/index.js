@@ -54,7 +54,7 @@ export default class Carousel extends React.Component{
               </div>
               <div className="product-offer mb-30" style={{height: '200px'}}>
               
-                <div className="img-fluid" id="container-aa3c00a92a88c702eb3e4032e47081e4"></div>
+                <div className="img-fluid" id=""></div>
 
               </div>
             </div>

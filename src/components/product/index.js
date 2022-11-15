@@ -16,8 +16,13 @@ render(){
           <div className="text-center py-4">
             <a className="h6 text-decoration-none text-truncate" href="/product_details">Product Name Goes Here</a>
             <div className="d-flex align-items-center justify-content-center mt-2">
-              <h5>$123.00</h5><h6 className="text-muted ml-2"><del>$123.00</del></h6>
+              <h5>$123.00</h5><h6 className="text-muted ml-2"><i className='fa fa-truck'></i></h6>
+
             </div>
+           
+            
+           <p> <i className='fa fa-map-marker'></i> Pakistan islamabad</p>
+          
            
           </div>
         </div>
