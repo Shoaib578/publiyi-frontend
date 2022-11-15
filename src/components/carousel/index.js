@@ -58,7 +58,7 @@ export default class Carousel extends React.Component{
                 <div className='img-fluid'>
              
 
-<ins class="adsbygoogle"
+    <ins class="adsbygoogle"
      style={{display:"block"}}
      data-ad-client="ca-pub-6796247302325530"
      data-ad-slot="2166678587"
