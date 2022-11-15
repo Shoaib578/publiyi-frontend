@@ -9,6 +9,8 @@ export default class Carousel extends React.Component{
       
         return(
           <div className="container-fluid mb-3">
+              <GoogleAds slot="2166678587"/>
+
           <div className="row px-xl-5">
             <div className="col-lg-8">
               <div id="header-carousel" className="carousel slide carousel-fade mb-30 mb-lg-0" data-ride="carousel">
