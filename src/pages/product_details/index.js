@@ -20,7 +20,7 @@ export default class ProductDetails extends React.Component {
             <div>
             {/* Shop Detail Start */}
             <div className="container-fluid pb-5">
-            <div  id="container-aa3c00a92a88c702eb3e4032e47081e4"></div>
+          
 
               <div className="row px-xl-5">
                 <div className="col-lg-5 mb-30">
@@ -125,10 +125,10 @@ export default class ProductDetails extends React.Component {
                     </div>
 
                     <div style={{display:"flex",flexDirection:"row",justifyContent:"space-between",width:"43%"}}>
-                    <button  data-toggle="modal" data-target="#exampleModal" className="btn btn-primary py-2 px-4" >
+                    <button  data-toggle="modal" data-target="#exampleModal" className="btn btn-primary" >
                     Contact Now</button>
 
-                      <button  data-toggle="modal" data-target="#reserveModal" className="btn btn-primary py-2 px-4 ml-3" >
+                      <button  data-toggle="modal" data-target="#reserveModal" className="btn btn-primary ml-3" >
                     Reserve Now</button>
                     </div>
                   

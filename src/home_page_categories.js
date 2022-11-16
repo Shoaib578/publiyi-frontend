@@ -7,7 +7,7 @@ const home_page_categories = [
     },
     {
       "category":"Fashion",
-      "image":base_url+"/img/cat-1.jpg",
+      "image":base_url+"/img/product-4.jpg",
     
     },
     {
@@ -44,7 +44,30 @@ const home_page_categories = [
 
     
       
+    },
+    {
+      "category":"Telephone",
+    
+      "image":base_url+"/img/telephone.png",
+    },
+    {
+      "category":"Jobs",
+      "image":base_url+"/img/jobs.png",
+    
+      
+    },
+    ,{
+      "category":"Home",
+      "image":base_url+"/img/home.png",
+    
+     
+    },{
+      "category":"Multimedia",
+      "image":base_url+"/img/multi.png",
+    
+      
     }
+
 ]
 
 

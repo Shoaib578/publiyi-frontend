@@ -7,7 +7,7 @@ export default class Shop extends React.Component {
             <div>
 
             <div class="container-fluid">
-            <div  id="container-aa3c00a92a88c702eb3e4032e47081e4"></div>
+          
 
         <div class="row px-xl-5">
 
